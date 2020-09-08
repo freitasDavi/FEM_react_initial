@@ -30078,8 +30078,8 @@ var SearchParams = function SearchParams() {
     setBreed("");
 
     _pet.default.breeds(animal).then(function (_ref) {
-      var breeds = _ref.breeds;
-      var breedStrings = breeds.map(function (_ref2) {
+      var apiBreeds = _ref.breeds;
+      var breedStrings = apiBreeds.map(function (_ref2) {
         var name = _ref2.name;
         return name;
       });
@@ -30114,9 +30114,9 @@ var _SearchParams = _interopRequireDefault(require("./SearchParams"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var App = function App() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.StrictMode, null, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", {
     id: "something-important"
-  }, "Adopt Me!"), /*#__PURE__*/_react.default.createElement(_SearchParams.default, null));
+  }, "Adopt Me!"), /*#__PURE__*/_react.default.createElement(_SearchParams.default, null)));
 };
 
 (0, _reactDom.render)( /*#__PURE__*/_react.default.createElement(App, null), document.getElementById("root"));
@@ -30148,7 +30148,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56417" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58798" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
